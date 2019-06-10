@@ -1,4 +1,4 @@
-# Custom Arduino Boot Loader with Watchdog Timer Support
+# Arduino Boot Loader with Watchdog Timer Support
 
 This repository contains a customized version of the Arduino boot loader firmware with watchdog timer (WDT) support.
 
@@ -27,6 +27,7 @@ based arduino board.
 This has been tested with Arduino IDE version 1.8.8.
 
 Please follow these steps:
+* Install the Arduino IDE
 * Install XCode from the App Store
 * Open Terminal and go to the following path: `/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/bootloaders/atmega`
 For ATMega328P at 16MHz:
@@ -35,3 +36,10 @@ For ATMega328P at 16MHz:
 For ATMega328P at 8MHz:
 * Make a backup copy and delete the following file: `ATmegaBOOT_168_atmega328_pro_8MHz.hex`
 * Execute: `make atmega328_pro8` 
+Uploading:
+* Connect your Arduino board with your PC via an In-System Programmer (ISP) 
+* Start your Arduino IDE and select your ISP model inside: Tools > Programmer
+* Select your board model inside: Tools > Board
+* Select your processor model inside: Tools > Processor
+* Burn the bootloader by selecting: Tools > Burn Bootloader
+
