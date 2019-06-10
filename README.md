@@ -37,7 +37,7 @@ For ATMega328P at 8MHz:
 * Make a backup copy and delete the following file: `ATmegaBOOT_168_atmega328_pro_8MHz.hex`
 * Execute: `make atmega328_pro8` 
 Uploading:
-* Connect your Arduino board with your PC via an In-System Programmer (ISP) 
+* Connect your Arduino board with your PC via an in-system programmer (ISP) 
 * Start your Arduino IDE and select your ISP model inside: Tools > Programmer
 * Select your board model inside: Tools > Board
 * Select your processor model inside: Tools > Processor
