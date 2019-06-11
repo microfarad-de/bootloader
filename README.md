@@ -30,13 +30,14 @@ Please follow these steps:
 * Install the Arduino IDE
 * Install XCode from the App Store
 * Open Terminal and go to the following path: `/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/bootloaders/atmega`
+* Make a backup copy of and replace the following file with the version from this repository: `ATmegaBOOT_168.c`
 
 For ATMega328P at 16MHz:
-* Make a backup copy and delete the following file: `ATmegaBOOT_168_atmega328.hex`
+* Make a backup copy and remove the following file: `ATmegaBOOT_168_atmega328.hex`
 * Execute: `make atmega328`
 
 For ATMega328P at 8MHz:
-* Make a backup copy and delete the following file: `ATmegaBOOT_168_atmega328_pro_8MHz.hex`
+* Make a backup copy and remove the following file: `ATmegaBOOT_168_atmega328_pro_8MHz.hex`
 * Execute: `make atmega328_pro8` 
 
 Burn the bootloader:
