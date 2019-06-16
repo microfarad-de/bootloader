@@ -22,9 +22,28 @@ into the stock bootloader.
 This modification has been tested on an ATmega328P based Arduino Pro Mini and would supposedly work on any ATmega168/ATmega328 
 based arduino board.
 
-## Installation on MAC OS X
+## Burning the Bootloader
 
-This has been tested with Arduino IDE version 1.8.8.
+Following are the instructions for burning the bootloader.
+
+The ATmega bootloader files are stored in the follwoing locations:
+* On MAC OS X: `/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/bootloaders/atmega`
+* On Windows: `C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\atmega`
+
+Replace the follwoing files in the above location with the versions from this repository, creating a backup copy of the original files:
+* For ATmega328P at 16MHz: `ATmegaBOOT_168_atmega328.hex`
+* For ATmega328P at 8MHz: `ATmegaBOOT_168_atmega328_pro_8MHz.hex`
+
+Follow these steps to upload the bootloader to the Arduino board:
+* Connect your Arduino board with your PC via an in-system programmer (ISP) 
+* Start your Arduino IDE and select your ISP model inside: Tools > Programmer
+* Select your board model inside: Tools > Board
+* Select your processor model inside: Tools > Processor
+* Burn the bootloader by selecting: Tools > Burn Bootloader
+
+## Compiling the Bootloader
+
+Alternatively, you may compile the bootloader `.hex` files from the souce code provided in this repository. Only instructions for MAC OS X are currently provided as this happens to be the platform i currently use. This procedure has been tested with Arduino IDE version 1.8.8.
 
 Please follow these steps:
 * Install the Arduino IDE
@@ -32,18 +51,11 @@ Please follow these steps:
 * Open Terminal and go to the following path: `/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/bootloaders/atmega`
 * Make a backup copy of and replace the following file with the version from this repository: `ATmegaBOOT_168.c`
 
-For ATMega328P at 16MHz:
+For ATmega328P at 16MHz:
 * Make a backup copy and remove the following file: `ATmegaBOOT_168_atmega328.hex`
 * Execute: `make atmega328`
 
-For ATMega328P at 8MHz:
+For ATmega328P at 8MHz:
 * Make a backup copy and remove the following file: `ATmegaBOOT_168_atmega328_pro_8MHz.hex`
 * Execute: `make atmega328_pro8` 
-
-Burn the bootloader:
-* Connect your Arduino board with your PC via an in-system programmer (ISP) 
-* Start your Arduino IDE and select your ISP model inside: Tools > Programmer
-* Select your board model inside: Tools > Board
-* Select your processor model inside: Tools > Processor
-* Burn the bootloader by selecting: Tools > Burn Bootloader
 
