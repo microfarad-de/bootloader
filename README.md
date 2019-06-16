@@ -3,15 +3,15 @@
 This repository contains a customized version of the Arduino bootloader firmware with watchdog timer (WDT) support.
 
 The stock Arduino bootloader introduces a couple of seconds of delay during boot in order to provide the Arduino IDE 
-with enough time to start uploading a new sketch. This has the follwoing disadvantages:
+with enough time to start uploading a new sketch. This has the following disadvantages:
 
 * The Arduino waits for a couple of seconds before starting to execute the main sketch upon initial power on.
-* The Arduino gets stuck in an endless loop follwoing a watchdog timer expiry. The delay causes the WDT to expire before
+* The Arduino gets stuck in an endless loop following a watchdog timer expiry. The delay causes the WDT to expire before
 the main sketch is able to load and perform a WDT reset.
 
 With this custom bootloader, the aforementioned delay is introduced only if the reboot reason is due to pulling the external
 reset pin to ground. A delay is no longer introduced during initial power on or a reboot due to a watchdog timer expiry, which
-brings the follwoing benefits:
+brings the following benefits:
 
 * The Arduino boots-up instantly after initial power on.
 * The Arduino is no longer stuck in an endless loop following a WDT expiry.
@@ -26,11 +26,11 @@ based arduino board.
 
 Following are the instructions for burning the bootloader.
 
-The ATmega bootloader files are stored in the follwoing locations:
+The ATmega bootloader files are stored in the following locations:
 * On MAC OS X: `/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/bootloaders/atmega`
 * On Windows: `C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\atmega`
 
-Replace the follwoing files in the above location with the versions from this repository, creating a backup copy of the original files:
+Replace the following files in the above location with the versions from this repository, creating a backup copy of the original files:
 * For ATmega328P at 16MHz: `ATmegaBOOT_168_atmega328.hex`
 * For ATmega328P at 8MHz: `ATmegaBOOT_168_atmega328_pro_8MHz.hex`
 
