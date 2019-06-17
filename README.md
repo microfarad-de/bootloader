@@ -16,10 +16,10 @@ brings the following benefits:
 * The Arduino boots-up instantly after initial power on.
 * The Arduino is no longer stuck in an endless loop following a WDT expiry.
 
-The bootloader modification consists of defining `WATCHDOG_MODS` macro which activates the required functinality already implemented
-into the stock bootloader.
+The bootloader modification consists of defining `WATCHDOG_MODS` macro which activates the required functionality that has been 
+already implemented within the stock bootloader.
 
-This modification has been tested on an ATmega328P based Arduino Pro Mini and would supposedly work on any ATmega168/ATmega328 
+This modification has been tested on an ATmega328P based Arduino Pro Mini and would supposedly work on any ATmega328 
 based arduino board.
 
 ## Burning the Bootloader
@@ -39,11 +39,12 @@ Follow these steps to upload the bootloader to the Arduino board:
 * Start your Arduino IDE and select your ISP model inside: Tools > Programmer
 * Select your board model inside: Tools > Board
 * Select your processor model inside: Tools > Processor
+* Select the serial port name inside: Tools > Port
 * Burn the bootloader by selecting: Tools > Burn Bootloader
 
 ## Compiling the Bootloader
 
-Alternatively, you may compile the bootloader `.hex` files from the souce code provided in this repository. Only instructions for MAC OS X are currently provided as this happens to be the platform i currently use. This procedure has been tested with Arduino IDE version 1.8.8.
+Alternatively, you may compile the bootloader `.hex` files from the souce code provided in this repository. Only instructions for MAC OS X are currently provided as this happens to be the platform that the author currently uses. This procedure has been tested with Arduino IDE version 1.8.8.
 
 Please follow these steps:
 * Install the Arduino IDE
@@ -58,4 +59,7 @@ For ATmega328P at 16MHz:
 For ATmega328P at 8MHz:
 * Make a backup copy and remove the following file: `ATmegaBOOT_168_atmega328_pro_8MHz.hex`
 * Execute: `make atmega328_pro8` 
+
+For other platforms:
+* Within the `Makefile` you can find make targets for compiling bootloaders for other platform types.
 
