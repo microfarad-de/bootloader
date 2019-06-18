@@ -63,5 +63,5 @@ For ATmega328P at 8MHz:
 * Execute: `make atmega328_pro8` 
 
 For other platforms:
-* Within the `Makefile` you can find make targets for compiling bootloaders for other platform types.
+* Within the `Makefile` you can find further targets for compiling bootloaders for other platform types.
 
