@@ -44,7 +44,9 @@ Follow these steps to upload the bootloader to the Arduino board:
 
 ## Compiling the Bootloader
 
-Alternatively, you may compile the bootloader `.hex` files from the souce code provided in this repository. Only instructions for MAC OS X are currently provided as this happens to be the platform that the author currently uses. This procedure has been tested with Arduino IDE version 1.8.8.
+Alternatively, you may compile the bootloader `.hex` files from the souce code provided in this repository. 
+Only instructions for MAC OS X are currently provided as this happens to be the platform used by the author. 
+This procedure has been tested with Arduino IDE version 1.8.8.
 
 Please follow these steps:
 * Install the Arduino IDE
