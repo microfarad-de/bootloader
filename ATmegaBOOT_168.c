@@ -287,7 +287,7 @@ int main(void)
 #ifdef WATCHDOG_MODS
 	ch = MCUSR;
 	
-	/* 20190610 KHr: comment-out the follwoing part if you would like to read MCUSR and reset 
+	/* 20190610 KHr: comment-out the following part if you would like to read MCUSR and reset 
 	   both MCUSR and WDTCSR from within the main sketch */
 	MCUSR = 0;
 	WDTCSR |= _BV(WDCE) | _BV(WDE);
