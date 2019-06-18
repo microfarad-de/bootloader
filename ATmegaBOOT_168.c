@@ -8,7 +8,7 @@
 /*                                                        */
 /*                                                        */
 /* 20190610: enabled watchdog timer support by defining   */
-/*           the WATCHDOG_MODS macro by K. Hraibi         */
+/*           the WATCHDOG_MODS macro by K. Hraibi (KHr)   */
 /* 20090308: integrated Mega changes into main bootloader */
 /*           source by D. Mellis                          */
 /* 20080930: hacked for Arduino Mega (with the 1280       */
@@ -73,7 +73,7 @@
 #include <avr/wdt.h>
 #include <util/delay.h>
 
-/* KHr CUSTOMIZED: add watchdog support */
+/* 20190610 KHr: enable watchdog support */
 #define WATCHDOG_MODS
 
 /* the current avr-libc eeprom functions do not support the ATmega168 */
@@ -286,12 +286,13 @@ int main(void)
 
 #ifdef WATCHDOG_MODS
 	ch = MCUSR;
-/* KHr CUSTOMIZED: comment-out to not reset the watchdog */
+	
+	/* 20190610 KHr: comment-out the follwoing part if you would like to read MCUSR and reset 
+	   both MCUSR and WDTCSR from within the main sketch */
 	MCUSR = 0;
-
 	WDTCSR |= _BV(WDCE) | _BV(WDE);
 	WDTCSR = 0;
-/**/
+	/**/
 
 	// Check if the WDT was used to reset, in which case we dont bootload and skip straight to the code. woot.
 	if (! (ch &  _BV(EXTRF))) // if its a not an external reset...
