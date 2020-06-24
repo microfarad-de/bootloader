@@ -27,7 +27,7 @@ based arduino board.
 Following are the instructions for burning the bootloader.
 
 The ATmega bootloader files are stored in the following locations:
-* On MAC OS X: `/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/bootloaders/atmega`
+* On Mac OS X: `/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/bootloaders/atmega`
 * On Windows: `C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\atmega`
 
 Replace the following files in the above location with the versions from this repository, creating a backup copy of the original files:
@@ -45,7 +45,7 @@ Follow these steps to upload the bootloader to the Arduino board:
 ## Compiling the Bootloader
 
 Alternatively, you may compile the bootloader `.hex` files from the souce code provided in this repository. 
-Only instructions for MAC OS X are currently provided as this happens to be the platform used by the author. 
+Only instructions for Mac OS X are currently provided as this happens to be the platform used by the author. 
 This procedure has been tested with Arduino IDE version 1.8.8.
 
 Please follow these steps:
