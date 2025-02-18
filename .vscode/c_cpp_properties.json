@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "defines": [
+                "__AVR_ATmega328P__"
+            ],
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/Applications/Arduino.app/Contents/Java/hardware/tools/avr/avr/include/**",
+                "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/**",
+                "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/variants/standard/**",
+                "/Applications/Arduino.app/Contents/Java/hardware/tools/avr/avr/include/avr/**"
+            ],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "${default}"
+        }
+    ],
+    "version": 4
+}
